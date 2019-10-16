@@ -4,7 +4,7 @@ public class MathEquation {
     private double leftVal;
     private double rightVal;
     private double result;
-    private char opCode;
+    private char opCode = 'a';
 
     public double getLeftVal() {
         return leftVal;
@@ -27,6 +27,20 @@ public class MathEquation {
 
     public double getResult() {
         return result;
+    }
+
+    public MathEquation(){}
+
+    public MathEquation(char opCode)
+    {
+        this.opCode=opCode;
+    }
+
+    public MathEquation(char opCode,double leftVal, double rightVal)
+    {
+        this.rightVal=rightVal;
+        this.leftVal=leftVal;
+        this.opCode=opCode;
     }
 
     public void execute(){
